@@ -6,13 +6,15 @@ let clicked = false;
 const imageChanges = [
   { time: 100, src: "./media/Day1.png" },
   { time: 200, src: "./media/Day2.png" },
-  { time: 400, src: "./media/Day1.png" },
-  { time: 900, src: "./media/Day2.png" },
-  { time: 1700, src: "./media/Day1.png" },
-  { time: 3800, src: "./media/Day2.png" },
-  { time: 12000, src: "./media/Day1.png" },
-  { time: 12500, src: "./media/Day2.png" },
-  { time: 15000, src: "./media/Day1.png" }
+  { time: 1900, src: "./media/Day1.png" },
+  { time: 2300, src: "./media/Day2.png" },
+  { time: 2600, src: "./media/Day1.png" },
+  { time: 3000, src: "./media/Day2.png" },
+  { time: 3400, src: "./media/Day1.png" },
+  { time: 3900, src: "./media/Day2.png" },
+  { time: 7000, src: "./media/Day1.png" },
+  { time: 8000, src: "./media/Day2.png" },
+  { time: 10500, src: "./media/Day1.png" },
 ];
 
 image.addEventListener('click', () => {
