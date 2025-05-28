@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    animation: gradientFlow 50s ease-in-out infinite;
+    background: linear-gradient(270deg, #0050ac, #a200ff, #ffbb00, #ff9900, #ff0055, #0055ff);
+    background-size: 1200% 1200%;
+  }
+
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
+  header{
+    margin-bottom: 10px;
+
+.hed{
+    text-align: center;
+    padding-top: 30px;
+  .ava{
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        border: solid black 2px;
+    }
+  }
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Kalam' ;
+    letter-spacing: 2px;
+    transition: font-family 0.5s ease;
+  }
+}
+
+@media (max-width: 700px){
+p{
+    margin-bottom: 60px;
+}
+}
+
+#changingText {
+    transition: opacity 0.5s ease, font-family 0.3s ease;
+    opacity: 1;
+  }
+
+
+
+  footer img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 50px;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  .imblock {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 10px; /* відступ між іконкою та текстом */
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-height: 400px; /* фіксована мінімальна висота */
+  }
+  
+  .block1, .block2, .block3 {
+    width: 300px;
+    height: 40px;
+    background-color: rgb(70, 70, 70);
+    display: flex;
+    align-items: center;        /* вирівнює по вертикалі */
+    justify-content: center;    /* вирівнює по горизонталі */
+    gap: 10px;                  /* відступ між елементами всередині */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.8s;
+  }
+  
+  .block1:hover,
+  .block2:hover,
+  .block3:hover {
+    background-color: #e2f729; /* ефект при наведенні */
+  }
+
+  .block1:hover p,
+.block2:hover p,
+.block3:hover p {
+  color: black;
+}
+.block1 p, .block2 p, .block3 p {
+    transition: color 0.3s;
+  }
+  
+  
+  .block1 p, .block2 p, .block3 p {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+  }
+
+  @media (min-width: 1000px){
+.block1{
+    margin-left: 400px;
+}
+.block3{margin-right: 400px;}
+  }
+
+  #maxwell{
+    width: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (max-width: 700px){
+    #maxwell{
+        width: 200px;
+        margin-left: -50px;
+      }
+  }
