@@ -69,3 +69,59 @@ const fonts = [
       index = (index + 1) % fonts.length;
     }, 500); // час має збігатися з transition: opacity
   }, 2000); // зміна кожні 2 секунди
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const music = document.getElementById("music");
+const toggleMusicBtn = document.getElementById("toggleMusic");
+const petBtn = document.getElementById("pet");
+const petSound = document.getElementById("petSound");
+const specialSound = document.getElementById("specialSound");
+const overlay = document.getElementById("overlay");
+
+let musicPlaying = false;
+let petClickCount = 0;
+let clickTimer = null;
+
+toggleMusicBtn.onclick = () => {
+  if (musicPlaying) {
+    music.pause();
+  } else {
+    music.play();
+  }
+  musicPlaying = !musicPlaying;
+};
+
+petBtn.onclick = () => {
+  petClickCount++;
+
+  petSound.currentTime = 0;
+  petSound.play();
+
+  clearTimeout(clickTimer);
+  clickTimer = setTimeout(() => {
+    petClickCount = 0;
+  }, 2000); // сбрасывает счёт через 2 секунды без нажатий
+
+  if (petClickCount >= 10) {
+    petClickCount = 0;
+    overlay.style.display = "block";
+    specialSound.currentTime = 0;
+    specialSound.play();
+  }
+};
+
